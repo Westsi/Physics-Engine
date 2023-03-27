@@ -3,6 +3,6 @@
 #include <stdio.h>
 
 Particle newOriginParticle() {
-    Particle p = {zeroed, zeroed};
+    Particle p = {zeroed, zeroed, 1};
     return p;
 }

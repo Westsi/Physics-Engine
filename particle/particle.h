@@ -5,6 +5,8 @@
 typedef struct {
     Vec3 position;
     Vec3 acceleration;
+    int mass;
+    
 } Particle;
 
 Particle newOriginParticle();
