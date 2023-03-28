@@ -1,13 +1,13 @@
 #ifndef VECTOR_H_
 #define VECTOR_H_
-#include "../coordinate/coordinate.h"
+#include "coordinate.h"
 
 typedef Rectangular Vec2;
 
 typedef Cartesian Vec3;
 
-const Vec2 zeroedVec2 = {0,0};
-const Vec3 zeroed = {0,0,0};
+Vec2 zeroedVec2 = {0,0};
+Vec3 zeroed = {0,0,0};
 
 Vec2 addVec2(Vec2 a, Vec2 b);
 Vec3 add(Vec3 a, Vec3 b);

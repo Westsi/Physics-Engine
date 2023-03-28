@@ -1,5 +1,5 @@
 @ECHO OFF
 
-gcc coordinate/*.c particle/*.c vector/*.c *.c -o a.exe
+gcc vector/*.c coordinate/*.c particle/*.c *.c -o a.exe > out.txt
 
 a.exe
