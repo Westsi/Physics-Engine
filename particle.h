@@ -6,11 +6,16 @@ typedef struct {
     Cartesian position;
     Cartesian acceleration;
     float mass;
-    float volume; // density can be calculated with m/v
-    Spherical velocity; // i have no idea what this entire block is doing but i hope it works :|
-} Particle;
+    float volume;
+    Spherical velocity;
+} Particle;  // i have no idea what this entire block is doing but i hope it works :|
 
 Particle newOriginParticle();
+
+Particle newParticle(); // add to this
+
+float calculateDensity(Particle *p);
+
 
 void RunUpdate(Particle *p);
 

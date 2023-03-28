@@ -4,8 +4,18 @@
 #include "constant.h"
 
 Particle newOriginParticle() {
-    Particle p = {zeroed, zeroed, 1};
+    Spherical s;
+    s.magnitude = 0;
+    s.phi = 0;
+    s.theta = 0;
+    Particle p = {zeroed, zeroed, 1, 1, s};
     return p;
+}
+
+float calculateDensity(Particle *p) {
+    // assuming that mass and volume are SI
+    Particle ip = *p;
+    return ip.mass/ip.volume;
 }
 
 void RunUpdate(Particle *p) {
