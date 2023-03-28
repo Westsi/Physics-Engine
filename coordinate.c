@@ -1,6 +1,6 @@
 #include "coordinate.h"
 #include <math.h>
-#include "../constant.h"
+#include "constant.h"
 
 // UNTESTED - Let's pray it works
 

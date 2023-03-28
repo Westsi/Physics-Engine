@@ -1,7 +1,7 @@
 #include "particle.h"
-#include "../vector/vector.h"
+#include "vector.h"
 #include <stdio.h>
-#include "../constant.h"
+#include "constant.h"
 
 Particle newOriginParticle() {
     Particle p = {zeroed, zeroed, 1};

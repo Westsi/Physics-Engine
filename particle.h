@@ -1,7 +1,7 @@
 #ifndef PARTICLE_H_
 #define PARTICLE_H_
-#include "../vector/vector.h"
-#include "../coordinate/coordinate.h"
+#include "vector.h"
+#include "coordinate.h"
 
 typedef struct {
     Vec3 position;
