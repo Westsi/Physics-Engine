@@ -2,6 +2,9 @@
 #include <stdio.h>
 #include "vector.h"
 
+Vec2 zeroedVec2 = {0,0};
+Vec3 zeroed = {0,0,0};
+
 Vec2 addVec2(Vec2 a, Vec2 b) {
     Vec2 result = {a.x + b.x, a.y + b.y};
     return result;

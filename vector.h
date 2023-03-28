@@ -6,8 +6,8 @@ typedef Rectangular Vec2;
 
 typedef Cartesian Vec3;
 
-Vec2 zeroedVec2 = {0,0};
-Vec3 zeroed = {0,0,0};
+extern Vec2 zeroedVec2;
+extern Vec3 zeroed;
 
 Vec2 addVec2(Vec2 a, Vec2 b);
 Vec3 add(Vec3 a, Vec3 b);
