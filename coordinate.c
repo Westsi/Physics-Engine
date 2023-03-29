@@ -2,8 +2,6 @@
 #include <math.h>
 #include "constant.h"
 
-// UNTESTED - Let's pray it works
-
 Rectangular polarToRect(Polar *p) {
     Polar ip = *p;
     Rectangular r;

@@ -18,15 +18,20 @@ void RunUpdate(Particle *p) {
     Particle ip = *p;   // REMEMBER! This only allows you to read from struct and update values IN THIS SCOPE
                         // To update globally do p->_attribute_ = ...
 
-    calculateTerminalVelocity(p, AIR_DENSITY);
+    // calculateTerminalVelocity(p, AIR_DENSITY);
+
+    Vec3 change = zeroed;
 
     // apply forces to change particle's acceleration
     // gravity
-    Vec2 forceDueToGravity = (Vec2) {0, ip.mass * EARTH_GRAVITY};
+    change.y += EARTH_GRAVITY;
 
-    // calculate acceleration by adding all the vectors
+    // air resistance
+    change.x += calculateDrag(p, AIR_DENSITY, 'x') / ip.mass;
+    change.y += calculateDrag(p, AIR_DENSITY, 'y') / ip.mass;
+    change.z += calculateDrag(p, AIR_DENSITY, 'z') / ip.mass;
 
-    // apply acceleration to velocity
+    printVec(change);
 
     // move particle by velocity
 }
@@ -50,4 +55,40 @@ float calculateTerminalVelocity(Particle *p, float fluid_density) {
     float denominator = fluid_density * ip.crosssectarea * ip.dragcoefficient;
 
     return sqrt(numerator/denominator);
+}
+
+// Returns NEWTONS - FORCE!!
+float calculateDrag(Particle *p, float fluid_density, char xyz) {
+    /*
+    Returns in N
+    Formula is 0.5 * fluid density * relative speed between obj and fluid (normally just speed of obj, but watch out!) SQUARED * drag coefficient * cross sectional area
+    Units are:
+        relative speed m/s
+        density of fluid kg/m-3
+        area m-2
+        drag coefficient n/a
+    */
+
+    Particle ip = *p;
+
+    // ip.velocity.y might not work - check if bug occurs
+    float res;
+    switch (xyz)
+    {
+    case 'x':
+        res = (0.5 * fluid_density * ip.velocity.x * ip.velocity.x * ip.dragcoefficient * ip.crosssectarea);
+        break;
+    
+    case 'y':
+        res = (0.5 * fluid_density * ip.velocity.y * ip.velocity.y * ip.dragcoefficient * ip.crosssectarea);
+        break;
+    
+    case 'z':
+        res = (0.5 * fluid_density * ip.velocity.z * ip.velocity.z * ip.dragcoefficient * ip.crosssectarea);
+        break;
+    
+    default:
+        break;
+    }
+    return res;
 }
