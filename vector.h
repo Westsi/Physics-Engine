@@ -1,10 +1,16 @@
 #ifndef VECTOR_H_
 #define VECTOR_H_
-#include "coordinate.h"
 
-typedef Rectangular Vec2;
+typedef struct {
+    float x;
+    float y;
+} Vec2;
 
-typedef Cartesian Vec3;
+typedef struct {
+    float x;
+    float y;
+    float z;
+} Vec3;
 
 extern Vec2 zeroedVec2;
 extern Vec3 zeroed;

@@ -2,7 +2,7 @@
 
 float PI = 3.14159265359f;
 
-float EARTHGRAVITY = 9.80665f; // m/s
+float EARTHGRAVITY = -9.80665f; // m/s. Negative so that can just multiply and not worry about flying up @ 10 m/s :)
 
 float SPEEDOFSOUND = 331.29f; // m/s
 

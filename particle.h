@@ -3,20 +3,22 @@
 #include "coordinate.h"
 
 typedef struct {
-    Cartesian position;
-    Cartesian acceleration;
+    Vec3 position;
+    Vec3 acceleration;
     float mass;
     float volume;
-    Spherical velocity;
+    Vec3 velocity;
 } Particle;  // i have no idea what this entire block is doing but i hope it works :|
 
 Particle newOriginParticle();
 
-Particle newParticle(); // add to this
+// Particle newParticle(); // add to this
 
 float calculateDensity(Particle *p);
 
 
 void RunUpdate(Particle *p);
+
+void test(Particle *p);
 
 #endif

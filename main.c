@@ -6,5 +6,10 @@
 
 int main(int argc, char argv[]) {
     // printf("Hello World!");
+    Particle mp;
+    mp.position = (Vec3) {0,0,0};
+    printf("%f\n", mp.position.x);
+    test(&mp);
+    printf("%f\n", mp.position.x);
     return 0;
 }

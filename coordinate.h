@@ -1,36 +1,33 @@
 #ifndef COORDINATE_H_
 #define COORDINATE_H_
 #include <math.h>
+#include "vector.h"
 
 // https://www.cs.mcgill.ca/~rwest/wikispeedia/wpcd/wp/p/Polar_coordinate_system.htm#:~:text=Polar%20coordinates%20can%20also%20be,as%20in%20the%20polar%20coordinates).
 
-typedef struct {
+typedef struct
+{
     float magnitude;
     float theta; // degrees - angle from x axis
 } Polar;
 
-typedef struct {
+typedef struct
+{
     float magnitude;
     float theta; // degrees - angle from x axis
     float height;
 } Cylindrical;
 
-typedef struct {
+typedef struct
+{
     float magnitude;
-    float phi; // degrees - angle from z axis
+    float phi;   // degrees - angle from z axis
     float theta; // degrees - angle from x axis
 } Spherical;
 
-typedef struct {
-    float x;
-    float y;
-} Rectangular;
+typedef Vec2 Rectangular;
 
-typedef struct {
-    float x;
-    float y;
-    float z;
-} Cartesian;
+typedef Vec3 Cartesian;
 
 Rectangular polarToRect(Polar *p);
 Polar rectToPolar(Rectangular *r);

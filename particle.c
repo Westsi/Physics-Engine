@@ -4,11 +4,7 @@
 #include "constant.h"
 
 Particle newOriginParticle() {
-    Spherical s;
-    s.magnitude = 0;
-    s.phi = 0;
-    s.theta = 0;
-    Particle p = {zeroed, zeroed, 1, 1, s};
+    Particle p = (Particle) {zeroed, zeroed, 1, 1, zeroed};
     return p;
 }
 
@@ -20,12 +16,16 @@ float calculateDensity(Particle *p) {
 
 void RunUpdate(Particle *p) {
     Particle ip = *p;
-    // apply forces to change particle's velocity
-    // gravity
-    
-    // acceleration
-    // magnetic
-    // lift
 
-    // apply velocity
+    // apply forces to change particle's acceleration
+    // gravity
+    Vec2 forceDueToGravity = (Vec2) {0, ip.mass * EARTHGRAVITY};
+
+    // apply acceleration to velocity
+
+    // move particle by velocity
+}
+
+void test(Particle *p) {
+    p->position = (Vec3) {10,10,10};
 }
