@@ -7,10 +7,22 @@ Add more as needed
 
 extern float PI;
 
-extern float EARTHGRAVITY; // m/s
+extern float EARTH_GRAVITY; // m/s
 
-extern float SPEEDOFSOUND; // m/s
+extern float SPEED_OF_SOUND; // m/s
 
-extern float SPEEDOFLIGHT; // m/s
+extern float SPEED_OF_LIGHT; // m/s
+
+extern float DRAG_COEFFICIENT_SPHERE;
+
+extern float DRAG_COEFFICIENT_HALF_SPHERE;
+
+extern float DRAG_COEFFICIENT_EQUIL_TRIANGLE;
+
+extern float DRAG_COEFFICIENT_SQUARE;
+
+extern float AIR_DENSITY; // kg/m-3
+
+extern float WATER_DENSITY; // kg/m-3
 
 #endif

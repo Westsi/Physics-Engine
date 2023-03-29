@@ -5,9 +5,11 @@
 typedef struct {
     Vec3 position;
     Vec3 acceleration;
-    float mass;
+    float mass; // kg
     float volume;
     Vec3 velocity;
+    float crosssectarea;
+    float dragcoefficient;
 } Particle;  // i have no idea what this entire block is doing but i hope it works :|
 
 Particle newOriginParticle();
@@ -19,6 +21,6 @@ float calculateDensity(Particle *p);
 
 void RunUpdate(Particle *p);
 
-void test(Particle *p);
+float calculateTerminalVelocity(Particle *p, float fluid_density);
 
 #endif
