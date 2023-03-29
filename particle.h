@@ -25,4 +25,6 @@ float calculateTerminalVelocity(Particle *p, float fluid_density);
 
 float calculateDrag(Particle *p, float fluid_density, char xyz);
 
+void printParticle(Particle *p);
+
 #endif

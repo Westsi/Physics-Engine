@@ -44,9 +44,9 @@ float dotProduct(Vec3 a, Vec3 b) {
 }
 
 void printVec(Vec3 a) {
-    printf("(%f, %f, %f)", a.x, a.y, a.z);
+    printf("(%f, %f, %f)\n", a.x, a.y, a.z);
 }
 
 void printVec2(Vec2 a) {
-    printf("(%f, %f)", a.x, a.y);
+    printf("(%f, %f)\n", a.x, a.y);
 }
