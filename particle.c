@@ -15,7 +15,8 @@ float calculateDensity(Particle *p) {
 }
 
 void RunUpdate(Particle *p) {
-    // in general Δt for this func should be 1, if not change
+    // in general Δt for this func should be 1 millisecond, if not change
+    float dt = 0.001;
 
 
     Particle ip = *p;   // REMEMBER! This only allows you to read from struct and update values IN THIS SCOPE
@@ -40,13 +41,13 @@ void RunUpdate(Particle *p) {
     // update velocity by acceleration
     // a*Δt=Δv
     // because Δt = 1 here
-    p->velocity = add(ip.velocity, change);
+    p->velocity = add(ip.velocity, multiplyByFloat(change, dt));
 
     // move particle by velocity
     p->position = add(p->velocity, p->position);
     
 
-    printParticle(p);
+    // printParticle(p);
 }
 
 // Negative result
@@ -106,8 +107,8 @@ float calculateDrag(Particle *p, float fluid_density, char xyz) {
     default:
         break;
     }
-    printf("Res %c: %f\n", xyz, res);
-    printf("Inputs: constant rho, Cd, csa. Velocity = %f\n", vel);
+    // printf("Res %c: %f\n", xyz, res);
+    // printf("Inputs: constant rho, Cd, csa. Velocity = %f\n", vel);
     return res;
 }
 

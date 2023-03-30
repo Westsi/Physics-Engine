@@ -26,6 +26,9 @@ float scalarMultiply(Vec3 a, Vec3 b);
 float dotProductVec2(Vec2 a, Vec2 b); // wrapper for scalarmultiply()
 float dotProduct(Vec3 a, Vec3 b); // wrapper for scalarmultiply()
 
+Vec2 multiplyByFloatVec2(Vec2 a, float b);
+Vec3 multiplyByFloat(Vec3 a, float b);
+
 void printVec(Vec3 a);
 void printVec2(Vec2 a);
 

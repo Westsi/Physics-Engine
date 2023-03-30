@@ -9,14 +9,14 @@ int main(int argc, char argv[]) {
     // printf("Hello World!");
 
     Particle p = newOriginParticle();
-    printf("%f", calculateTerminalVelocity(&p, AIR_DENSITY));
+    // printf("%f", calculateTerminalVelocity(&p, AIR_DENSITY));
     // p.velocity.y = -10;
 
-    // RunUpdate(&p);
-    // RunUpdate(&p);
-    // RunUpdate(&p);
+    for (int x = 0; x < 10001; x++) {
+        RunUpdate(&p);
+    }
 
-
+    printParticle(&p);
 
     return 0;
 }
