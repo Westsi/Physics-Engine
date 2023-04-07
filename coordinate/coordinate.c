@@ -1,6 +1,6 @@
 #include "coordinate.h"
 #include <math.h>
-#include "constant.h"
+#include "../constant/constant.h"
 
 Rectangular polarToRect(Polar *p) {
     Polar ip = *p;

@@ -1,7 +1,7 @@
-#include "particle.h"
-#include "vector.h"
+#include "../particle/particle.h"
+#include "../vector/vector.h"
 #include <stdio.h>
-#include "constant.h"
+#include "../constant/constant.h"
 
 Particle newOriginParticle() {
     Particle p = (Particle) {zeroed, zeroed, 1, 1, zeroed, PI, DRAG_COEFFICIENT_SPHERE};

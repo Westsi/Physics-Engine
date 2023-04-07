@@ -1,7 +1,7 @@
 #ifndef COORDINATE_H_
 #define COORDINATE_H_
 #include <math.h>
-#include "vector.h"
+#include "../vector/vector.h"
 
 // https://www.cs.mcgill.ca/~rwest/wikispeedia/wpcd/wp/p/Polar_coordinate_system.htm#:~:text=Polar%20coordinates%20can%20also%20be,as%20in%20the%20polar%20coordinates).
 
