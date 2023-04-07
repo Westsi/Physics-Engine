@@ -1,9 +1,9 @@
 #include<stdio.h>
 #include<math.h>
-#include "constant.h"
-#include "particle.h"
-#include "vector.h"
-#include "coordinate.h"
+#include "constant/constant.h"
+#include "particle/particle.h"
+#include "vector/vector.h"
+#include "coordinate/coordinate.h"
 
 int main(int argc, char argv[]) {
     // printf("Hello World!");
