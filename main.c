@@ -9,8 +9,9 @@ int main(int argc, char argv[]) {
     // printf("Hello World!");
 
     Particle p = newOriginParticle();
-    // printf("%f", calculateTerminalVelocity(&p, AIR_DENSITY));
-    p.velocity.y = -10;
+    printParticle(&p);
+    printf("%f\n", calculateTerminalVelocity(p.mass, PI*p.radius*p.radius, p.dragcoefficient, AIR_DENSITY));
+    // p.velocity.y = -10;
 
     for (int x = 0; x < 10001; x++) {
         RunUpdate(&p);
