@@ -19,11 +19,10 @@ void RunUpdate(Particle *p) {
     Vec3 change = zeroed;
 
     // apply forces to change particle's acceleration
-    printf("CSA: %f\n", PI*ip.radius*ip.radius);
     change.x += calculateDrag(ip.velocity.x, ip.dragcoefficient, PI*ip.radius*ip.radius, AIR_DENSITY) / ip.mass;
     change.z += calculateDrag(ip.velocity.z, ip.dragcoefficient, PI*ip.radius*ip.radius, AIR_DENSITY) / ip.mass;
 
-    change.y = ((ip.mass * EARTH_GRAVITY) + (ip.velocity.y, ip.dragcoefficient, PI*ip.radius*ip.radius, AIR_DENSITY))/ip.mass;
+    change.y = ((ip.mass * EARTH_GRAVITY) + calculateDrag(ip.velocity.y, ip.dragcoefficient, PI*ip.radius*ip.radius, AIR_DENSITY))/ip.mass;
 
 
     // set acceleration to change
