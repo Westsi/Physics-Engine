@@ -10,7 +10,7 @@ int main(int argc, char argv[]) {
 
     Particle p = newOriginParticle();
     // printf("%f", calculateTerminalVelocity(&p, AIR_DENSITY));
-    // p.velocity.y = -10;
+    p.velocity.y = -10;
 
     for (int x = 0; x < 10001; x++) {
         RunUpdate(&p);

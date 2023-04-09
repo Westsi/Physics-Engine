@@ -38,7 +38,7 @@ void RunUpdate(Particle *p) {
     // a*Δt=Δv
     p->velocity = add(ip.velocity, multiplyByFloat(change, dt));
     // move particle by velocity
-    p->position = add(p->velocity, p->position);
+    p->position = add(multiplyByFloat(p->velocity, dt), p->position);
     
 }
 
