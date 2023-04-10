@@ -9,6 +9,7 @@
   - [ ] As part of above, adapt all the particle methods to work with all shapes
 - [ ] Implement collision
 - [ ] Improve readme
+
 And down the line...
 - [ ] Make demos
 - [ ] Make alpha version
