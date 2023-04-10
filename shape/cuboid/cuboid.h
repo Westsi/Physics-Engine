@@ -17,6 +17,8 @@ typedef struct {
 
 Cuboid newOriginCuboid();
 
+Vec3 calculateOppositeCorner(Cuboid *c);
+
 void printCuboid(Cuboid *c);
 
 #endif
