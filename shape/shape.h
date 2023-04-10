@@ -9,6 +9,4 @@ float calculateTerminalVelocity(float mass, float crossSectionalArea, float drag
 float calculateDrag(float directionalVelocity, float dragCoefficient, float crossSectionalArea, float fluidDensity);
 
 
-// rectangular shape
-
 #endif
