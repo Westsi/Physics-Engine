@@ -1,11 +1,8 @@
 #include<math.h>
+#include<stdio.h>
 #include "shape.h"
 #include "../constant/constant.h"
 #include "../vector/vector.h"
-
-Sphere newOriginSphere() {
-    return (Sphere) {zeroed, zeroed, zeroed, 1, DRAG_COEFFICIENT_SPHERE, 1};
-}
 
 float calculateDensity(float mass, float volume) {
     // assuming that mass and volume are SI

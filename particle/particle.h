@@ -3,6 +3,7 @@
 #include "../coordinate/coordinate.h"
 #include "../vector/vector.h"
 #include "../shape/shape.h"
+#include "../shape/sphere/sphere.h"
 
 typedef Sphere Particle;
 

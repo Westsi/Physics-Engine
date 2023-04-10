@@ -3,6 +3,7 @@
 #include "../vector/vector.h"
 #include "../constant/constant.h"
 #include "../shape/shape.h"
+#include "../shape/sphere/sphere.h"
 
 Particle newOriginParticle() {
     return (Particle) newOriginSphere();
@@ -39,8 +40,5 @@ void RunUpdate(Particle *p) {
 }
 
 void printParticle(Particle *p) {
-    Particle ip = *p;
-
-    printf("Position: (%f, %f, %f)\nVelocity: (%f, %f, %f)\nAcceleration: (%f, %f, %f)\n", ip.position.x, ip.position.y, ip.position.z, ip.velocity.x, ip.velocity.y, ip.velocity.z, ip.acceleration.x, ip.acceleration.y, ip.acceleration.z);
-    printf("\nConstants:\nRadius: %f\nCross-sectional Area: %f\nMass: %f\n\n", ip.radius, ip.dragcoefficient, ip.mass);
+    printSphere((Sphere*) p);
 }
