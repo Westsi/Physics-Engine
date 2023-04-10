@@ -5,5 +5,5 @@
 ## TODO
 
 - [x] Test Coordinate System
-- [ ] Finish particle system
-- [ ] Add more constants
+- [ ] Make particle module obsolete, replaced with sphere
+  - [ ] As part of above, adapt all the particle methods to work with all shapes
