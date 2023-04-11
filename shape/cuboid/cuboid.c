@@ -7,6 +7,7 @@ Cuboid newOriginCuboid() {
     // using DRAG_COEFFICIENT_SQUARE here is stupid because the shape could have a non square face in the direction that drag is being calculated for
     // but I can't see any clear fixes.
     // HOW?!?!?!
+    // or is it similar enough that it can be called "constant"
     return (Cuboid) {zeroed, 1, 1, 1, zeroed, zeroed, DRAG_COEFFICIENT_SQUARE, 1};
 }
 
